@@ -1,249 +1,349 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abhiroop Mareedu</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Abhiroop Mareedu — Voice AI Engineer</title>
+<meta name="description" content="Abhiroop Mareedu builds real-time voice AI: streaming speech infrastructure, agent evaluation systems, and the latency work that makes machines feel human." />
+<meta name="theme-color" content="#08090a" />
+<meta property="og:title" content="Abhiroop Mareedu — Voice AI Engineer" />
+<meta property="og:description" content="Real-time voice infrastructure, agent evaluation systems, and latency work that makes machines feel human." />
+<meta property="og:type" content="website" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2308090a'/%3E%3Cpath d='M5 16h3.2l2.3-7 3.2 14 3-10.5L21 20l1.8-4H27' fill='none' stroke='%23ff4d00' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-    <!-- Loading Spinner -->
-    <div class="loading-spinner">
-        <div class="spinner"></div>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+
+<a class="skip" href="#work">Skip to content</a>
+
+<header class="topbar" id="topbar">
+  <a class="brand" href="#top" data-cursor="link">
+    <span class="brand-mark" aria-hidden="true">
+      <svg viewBox="0 0 32 14" width="30" height="14"><path class="brand-wave" d="M0 7h4l2.6-5.6L10 12.4 13.2 3l2.8 8 2.4-4.6L21 9l2-2h9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </span>
+    <span class="brand-name">Abhiroop&nbsp;Mareedu</span>
+  </a>
+
+  <nav class="nav" aria-label="Sections">
+    <a href="#work" data-nav>Work</a>
+    <a href="#builds" data-nav>Builds</a>
+    <a href="#stack" data-nav>Stack</a>
+    <a href="#about" data-nav>About</a>
+    <a href="#contact" data-nav>Contact</a>
+  </nav>
+
+  <div class="topbar-right">
+    <span class="clock" id="clock" title="Local time — Delhi, India">
+      <span class="dot" aria-hidden="true"></span><span id="clock-time">--:--:--</span> IST
+    </span>
+    <button class="kbd-btn" id="palette-open" aria-label="Open command palette">
+      <kbd>⌘</kbd><kbd>K</kbd>
+    </button>
+    <button class="icon-btn" id="theme-toggle" aria-label="Toggle colour theme" title="Toggle theme">
+      <svg class="i-sun" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.4M12 19.6V22M22 12h-2.4M4.4 12H2M18.4 5.6l-1.7 1.7M7.3 16.7l-1.7 1.7M18.4 18.4l-1.7-1.7M7.3 7.3L5.6 5.6"/></svg>
+      <svg class="i-moon" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 14.6A8.6 8.6 0 1 1 9.4 3.5a6.9 6.9 0 0 0 11.1 11.1Z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ───────────────────────── HERO ───────────────────────── -->
+  <section class="hero" id="hero">
+    <canvas id="signal" class="signal" aria-hidden="true"></canvas>
+    <div class="hero-glow" id="hero-glow" aria-hidden="true"></div>
+
+    <div class="wrap hero-inner">
+      <p class="eyebrow reveal"><span class="live-dot" aria-hidden="true"></span>Available for voice &amp; AI infrastructure roles</p>
+
+      <h1 class="display reveal" aria-label="Abhiroop Mareedu">
+        <span class="line"><span class="word">Abhiroop</span></span>
+        <span class="line"><span class="word">Mareedu</span></span>
+      </h1>
+
+      <div class="hero-meta">
+        <p class="lede reveal">
+          I build <em>real-time voice AI</em> — the streaming infrastructure, memory, and evaluation
+          systems that decide whether a machine feels like a conversation or a form with a microphone.
+        </p>
+        <dl class="hero-facts reveal">
+          <div><dt>Role</dt><dd>Lead AI Engineer, Coddle AI</dd></div>
+          <div><dt>Base</dt><dd>Delhi, India · remote-first</dd></div>
+          <div><dt>Focus</dt><dd>Latency, reliability, agent evals</dd></div>
+        </dl>
+      </div>
+
+      <div class="hero-cta reveal">
+        <a class="btn btn-primary" href="#work" data-cursor="link">See the work</a>
+        <a class="btn" href="Abhiroop_Mareedu_Resume.pdf" target="_blank" rel="noopener" data-cursor="link">Résumé, PDF</a>
+        <a class="btn btn-ghost" href="mailto:abhiroopmareedu@gmail.com" data-cursor="link">Get in touch</a>
+      </div>
     </div>
 
-    <!-- Progress Bar -->
-    <div class="progress-bar"></div>
-
-    <!-- Custom Cursor -->
-    <div class="cursor-follow"></div>
-
-    <!-- Theme Switcher -->
-    <div class="theme-switch">
-        <i class="fas fa-sun"></i>
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track" id="ticker-track"></div>
     </div>
+  </section>
 
-    <!-- Back to Top Button -->
-    <div class="back-to-top">
-        <i class="fas fa-arrow-up"></i>
+  <!-- ───────────────────────── METRICS ───────────────────────── -->
+  <section class="strip" aria-label="Selected results">
+    <div class="wrap strip-grid">
+      <div class="stat reveal"><span class="stat-num" data-count="45" data-prefix="−" data-suffix="%">−45%</span><span class="stat-label">Booking API p95 latency, peak season</span></div>
+      <div class="stat reveal"><span class="stat-num" data-count="79" data-prefix="−" data-suffix="%">−79%</span><span class="stat-label">Error rate on the same critical path</span></div>
+      <div class="stat reveal"><span class="stat-num" data-count="30" data-suffix="+">30+</span><span class="stat-label">Agent tool integrations in production</span></div>
+      <div class="stat reveal"><span class="stat-num" data-count="14" data-suffix="→3">14→3</span><span class="stat-label">Release cycle, days, via OTA automation</span></div>
     </div>
+  </section>
 
-    <!-- Header Section -->
-    <header>
-        <div id="particles-js"></div>
-        <div class="container">
-            <img src="assets/abhi.JPG" alt="Your Profile Picture" class="profile-img">
-            <h1 data-aos="fade-up">Abhiroop Mareedu</h1>
-            <p class="job-title" data-aos="fade-up" data-aos-delay="100">I'm a <span class="typed-text"></span></p>
-            <div class="social-links" data-aos="fade-up" data-aos-delay="200">
-                <a href="https://www.linkedin.com/in/abhiroop-m-70432693/" aria-label="LinkedIn"><i
-                        class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/roopo21" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://x.com/nolimitroopo" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+  <!-- ───────────────────────── WORK ───────────────────────── -->
+  <section class="section" id="work">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="index">01</span>
+        <h2>Work</h2>
+        <span class="rule" aria-hidden="true"></span>
+        <span class="section-note">Three years, three very different problem shapes</span>
+      </div>
+
+      <ol class="roles">
+
+        <li class="role is-open reveal">
+          <button class="role-head" aria-expanded="true" data-cursor="link">
+            <span class="role-when">Jan 2026 — Present</span>
+            <span class="role-who"><span class="role-co">Coddle AI</span><span class="role-title">Lead AI Engineer</span></span>
+            <span class="role-toggle" aria-hidden="true"></span>
+          </button>
+          <div class="role-body">
+            <div class="role-body-inner">
+              <p class="role-summary">A voice-first parenting assistant going up against Huckleberry and Riley. I own the voice stack and the product surface it feeds.</p>
+              <ul class="bullets">
+                <li>Architected a <b>multi-model routing system</b> and the real-time voice pipeline — streaming transcription, interruption handling, conversational state — on LiveKit, Deepgram, Cartesia and ElevenLabs.</li>
+                <li>Engineered a <b>persistent memory layer</b> so the assistant recalls parent preferences and child routines across sessions instead of restarting cold every call.</li>
+                <li>Built a <b>RAG-powered lactation support assistant</b> — retrieval pipelines over a curated clinical knowledge base, wired into live conversational flows.</li>
+                <li>Shipped <b>automated evaluation pipelines</b> with Langfuse and custom observability across 30+ agent tools, turning "it felt off" into a regression you can point at.</li>
+                <li>Automated the GitHub release pipeline and OTA updates for the React Native app: <b>14-day release cycles down to 3</b>.</li>
+              </ul>
+              <p class="role-stack"><span>React Native</span><span>Node.js</span><span>Python</span><span>GCP</span><span>LiveKit</span><span>Deepgram</span><span>Cartesia</span><span>ElevenLabs</span><span>Langfuse</span></p>
             </div>
-        </div>
-    </header>
+          </div>
+        </li>
 
-    <!-- Navigation -->
-    <nav id="navbar">
-        <div class="container">
-            <button class="mobile-nav-toggle">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul id="navMenu">
-                <li style="color: whitesmoke;"><a href="#about" class="nav-link active">About</a></li>
-                <li style="color: whitesmoke;"><a href="#experience" class="nav-link">Experience</a></li>
-                <li style="color: whitesmoke;"><a href="#education" class="nav-link">Education</a></li>
-                <li style="color: whitesmoke;"><a href="#skills" class="nav-link">Skills</a></li>
-                <li style="color: whitesmoke;"><a href="#portfolio" class="nav-link">Portfolio</a></li>
-                <li style="color: whitesmoke;"><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <h2 data-aos="fade-up">About Me</h2>
-            <div class="about-content" data-aos="fade-up" data-aos-delay="100">
-                <p>Hey there! I'm a software engineer with two years of experience specializing in backend development.
-                    I love tackling complex engineering challenges and finding smart, scalable solutions.</p>
-                <p>Right now, I'm diving into AI, experimenting with voice and image generation 🖼️. I'm a lifelong
-                    learner, always curious and pushing myself to grow.</p>
-                <p>Outside of coding, you'll find me working out or experimenting in the kitchen🔪👨🏽‍🍳.</p>
+        <li class="role reveal">
+          <button class="role-head" aria-expanded="false" data-cursor="link">
+            <span class="role-when">Jul 2025 — Jan 2026</span>
+            <span class="role-who"><span class="role-co">SuperBryn</span><span class="role-title">Founding Engineer #1 · Voice AI</span></span>
+            <span class="role-toggle" aria-hidden="true"></span>
+          </button>
+          <div class="role-body">
+            <div class="role-body-inner">
+              <p class="role-summary">Employee one. I set the product architecture and infrastructure direction, then went out and deployed it inside customers' environments.</p>
+              <ul class="bullets">
+                <li>Built an end-to-end <b>voice-agent simulation and evaluation framework</b>: automated red-teaming, adversarial prompts, interruption detection, tone analysis and adherence scoring.</li>
+                <li>Developed <b>VoiceAssist</b>, a configurable LiveKit platform letting customers deploy embeddable voice widgets with their own prompts and knowledge bases.</li>
+                <li>Integrated <b>Twilio, SIP trunking and PSTN</b> so agents place and take real phone calls — not just tidy web sessions.</li>
+                <li>Built templatized, industry-specific agent architectures and self-serve deployment tooling: kickoff to go-live in <b>about a week</b>, down from multi-week.</li>
+                <li>Created <b>Gatekeeper</b>, an open-source framework shielding widgets and outbound agents from spam, abuse and malicious traffic.</li>
+                <li>Worked as a <b>forward-deployed engineer</b>, embedded with partner teams building production voice agents.</li>
+              </ul>
+              <p class="role-stack"><span>TypeScript</span><span>React</span><span>Python</span><span>FastAPI</span><span>Supabase</span><span>LiveKit</span><span>WebRTC</span><span>Twilio</span><span>Docker</span></p>
             </div>
-        </div>
-    </section>
+          </div>
+        </li>
 
-    <!-- Experience Section -->
-    <section id="experience">
-        <div class="container">
-            <h2 data-aos="fade-up">Work Experience 👷🏾‍♂️</h2>
-
-            <div class="experience-item" data-aos="fade-up" data-aos-delay="100">
-                <p class="date">February 2025 - Present</p>
-                <p class="company">Building in Stealth</p>
-                <p class="position">Tinkerer and Developer</p>
-                <p>Working on cutting-edge AI applications with a focus on voice synthesis and image generation models.
-                    Leading the development of scalable backend systems and infrastructure.</p>
+        <li class="role reveal">
+          <button class="role-head" aria-expanded="false" data-cursor="link">
+            <span class="role-when">Jul 2023 — Jan 2025</span>
+            <span class="role-who"><span class="role-co">Urban Company</span><span class="role-title">Software Development Engineer I</span></span>
+            <span class="role-toggle" aria-hidden="true"></span>
+          </button>
+          <div class="role-body">
+            <div class="role-body-inner">
+              <p class="role-summary">Consumer scale, real money, real peak seasons. Where I learned that latency is a product feature and fraud is a design problem.</p>
+              <ul class="bullets">
+                <li>Led <b>peak-season scalability</b> work: Booking API p95 latency <b>−45%</b>, error rate <b>−79%</b>, and <b>$5K/month</b> off AWS RDS through database optimisation.</li>
+                <li>Built a <b>refund fraud prevention system</b> on DBT insights, encrypted payment identifiers and rule-based workflows — <b>₹5L/month</b> in abuse stopped.</li>
+                <li>Built an <b>AI-assisted issue triaging system</b> automating 300+ daily support workflows across CX and PX teams.</li>
+                <li>Shipped internal React dashboards, migrated ticketing and payment workflows, and rewrote APIs to be <b>6× faster</b> while holding backward compatibility across microservices.</li>
+              </ul>
+              <p class="role-stack"><span>TypeScript</span><span>Node.js</span><span>React</span><span>MongoDB</span><span>MySQL</span><span>ELK</span><span>DBT</span></p>
             </div>
+          </div>
+        </li>
 
-            <div class="experience-item" data-aos="fade-up" data-aos-delay="200">
-                <p class="date">July 2023 - January 2025</p>
-                <p class="company">Urban Company</p>
-                <p class="position">Software Development Engineer - 1</p>
-                <p>Developed and maintained scalable backend systems processing millions of transactions daily.
-                    Optimized database queries resulting in 40% improved performance. Collaborated with cross-functional
-                    teams to implement new features and improve user experience.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education">
-        <div class="container">
-            <h2 data-aos="fade-up">Education 🎓</h2>
-
-            <div class="education-item" data-aos="fade-up" data-aos-delay="100">
-                <p class="date">2019 - 2023</p>
-                <p class="degree">Bachelors of Technology in Electronics And Communications Engineering</p>
-                <p>IIIT Delhi</p>
-                <p>Coursework included Data Structures, Algorithms, Database Management Systems, Operating Systems,
-                    Computer Networks and Software Engineering.</p>
-            </div>
-            <!-- <div class="education-item" data-aos="fade-up" data-aos-delay="200">
-                <p class="date">2023</p>
-                <p class="degree">Machine Learning Specialization</p>
-                <p>Coursera (Stanford University)</p>
-                <p>Completed comprehensive coursework in machine learning algorithms, neural networks, and practical applications of AI.</p>
-            </div> -->
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills">
-        <div class="container">
-            <h2 data-aos="fade-up">Skills 🛠️</h2>
-            <div class="skills-container">
-                <div class="skill-item" data-aos="zoom-in" data-aos-delay="100">Python</div>
-                <div class="skill-item" data-aos="zoom-in" data-aos-delay="150">JavaScript</div>
-                <div class="skill-item" data-aos="zoom-in" data-aos-delay="200">Node.js</div>
-                <div class="skill-item" data-aos="zoom-in" data-aos-delay="250">React</div>
-                <div class="skill-item" data-aos="zoom-in" data-aos-delay="300">SQL</div>
-                <div class="skill-item" data-aos="zoom-in" data-aos-delay="350">MongoDB</div>
-                <div class="skill-item" data-aos="zoom-in" data-aos-delay="400">AWS</div>
-                <div class="skill-item" data-aos="zoom-in" data-aos-delay="450">Docker</div>
-                <div class="skill-item" data-aos="zoom-in" data-aos-delay="450">ELK stack</div>
-                <div class="skill-item" data-aos="zoom-in" data-aos-delay="450">Jenkins CICD</div>
-                <div class="skill-item" data-aos="zoom-in" data-aos-delay="500">Git</div>
-                <div class="skill-item" data-aos="zoom-in" data-aos-delay="550">Machine Learning</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio">
-        <div class="container">
-            <h2 data-aos="fade-up">Projects 👨🏽‍💻</h2>
-
-            <div class="portfolio-container">
-                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100">
-                    <img src="assets/projects/fakenewsdetection.jpg" alt="Project 1" class="portfolio-img">
-                    <div class="portfolio-overlay">
-                        <h3>Fake News Detection</h3>
-                        <a href="#" class="view-project" data-project="project1">View Details</a>
-                    </div>
-                    <div class="portfolio-info">
-                        <h3>Fake News Detection</h3>
-                        <p>A binary classification model to detect fake news by analyzing key features such as title,
-                            author, and text</p>
-                    </div>
-                </div>
-
-                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200">
-                    <img src="assets/projects/colorswitch.jpg" alt="Project 2" class="portfolio-img">
-                    <div class="portfolio-overlay">
-                        <h3>Color Swtich</h3>
-                        <a href="#" class="view-project" data-project="project2">View Details</a>
-                    </div>
-                    <div class="portfolio-info">
-                        <h3>E-commerce Platform</h3>
-                        <p>Full-stack e-commerce application with React frontend and Node.js backend. Includes payment
-                            processing and inventory management.</p>
-                    </div>
-                </div>
-
-                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="300">
-                    <img src="assets/projects/crypto.jpg" alt="Project 3" class="portfolio-img">
-                    <div class="portfolio-overlay">
-                        <h3>Web 3.0</h3>
-                        <a href="#" class="view-project" data-project="project3">View Details</a>
-                    </div>
-                    <div class="portfolio-info">
-                        <h3>Web 3.0</h3>
-                        <p>An AI-powered image generation tool using deep learning models to create unique artwork from
-                            text descriptions.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <h2 data-aos="fade-up">Contact Me</h2>
-
-            <div class="contact-form" data-aos="fade-up" data-aos-delay="100">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" placeholder="Your Name" class="form-input">
-                    <small class="error-message"></small>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Your Email" class="form-input">
-                    <small class="error-message"></small>
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" placeholder="Your Message" class="form-input"></textarea>
-                    <small class="error-message"></small>
-                </div>
-
-                <button type="submit" id="submit-form">Send Message</button>
-                <p id="form-status" class="mt-3"></p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Project Modals -->
-    <div class="modal" id="projectModal">
-        <button class="modal-close"><i class="fas fa-times"></i></button>
-        <div class="modal-content">
-            <div id="modalContent"></div>
-        </div>
+      </ol>
     </div>
+  </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Abhiroop Mareedu. All Rights Reserved.</p>
+  <!-- ───────────────────────── BUILDS ───────────────────────── -->
+  <section class="section" id="builds">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="index">02</span>
+        <h2>Selected builds</h2>
+        <span class="rule" aria-hidden="true"></span>
+        <span class="section-note">Things that exist because someone had to build them</span>
+      </div>
+
+      <div class="cards">
+        <article class="card reveal" data-cursor="card">
+          <div class="card-top"><span class="card-kind">Open source</span><span class="card-year">2025</span></div>
+          <h3>Gatekeeper</h3>
+          <p>A defence layer for voice widgets and outbound agents — rate shaping, abuse heuristics and traffic classification, so a public phone number doesn't become a public liability.</p>
+          <p class="tags"><span>Python</span><span>Abuse detection</span><span>OSS</span></p>
+          <svg class="card-art" viewBox="0 0 200 80" aria-hidden="true"><path d="M4 40h28l10-26 12 52 11-40 9 26 10-14 12 20 10-30 9 12h62" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </article>
+
+        <article class="card reveal" data-cursor="card">
+          <div class="card-top"><span class="card-kind">Platform</span><span class="card-year">2025</span></div>
+          <h3>VoiceAssist</h3>
+          <p>A configurable LiveKit platform for shipping embeddable voice agents: bring a prompt and a knowledge base, get a widget that answers the phone and the browser.</p>
+          <p class="tags"><span>LiveKit</span><span>WebRTC</span><span>SIP / PSTN</span></p>
+          <svg class="card-art" viewBox="0 0 200 80" aria-hidden="true"><circle cx="40" cy="40" r="14" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="40" cy="40" r="26" fill="none" stroke="currentColor" stroke-width="1" opacity=".5"/><circle cx="40" cy="40" r="38" fill="none" stroke="currentColor" stroke-width="1" opacity=".22"/><path d="M92 40h104" stroke="currentColor" stroke-width="1.2" stroke-dasharray="3 6"/></svg>
+        </article>
+
+        <article class="card reveal" data-cursor="card">
+          <div class="card-top"><span class="card-kind">Infrastructure</span><span class="card-year">2025 — 26</span></div>
+          <h3>Agent simulation &amp; eval harness</h3>
+          <p>Synthetic callers that argue, interrupt, go off-script and try to jailbreak. LLM-as-a-judge scoring for tone, adherence and recovery — CI for conversations.</p>
+          <p class="tags"><span>Red-teaming</span><span>LLM-as-a-Judge</span><span>Langfuse</span></p>
+          <svg class="card-art" viewBox="0 0 200 80" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.3"><rect x="10" y="26" width="26" height="28" rx="4"/><rect x="86" y="12" width="26" height="26" rx="4"/><rect x="86" y="44" width="26" height="26" rx="4"/><rect x="162" y="26" width="26" height="28" rx="4"/><path d="M36 40h50M112 25h30l20 15M112 57h30l20-15" stroke-dasharray="3 5"/></g></svg>
+        </article>
+
+        <article class="card reveal" data-cursor="card">
+          <div class="card-top"><span class="card-kind">Product</span><span class="card-year">2026</span></div>
+          <h3>VoiceFirst &amp; the memory layer</h3>
+          <p>The assistant new parents talk to at 3am. Multi-model routing under the hood, a persistent memory of the household, and RAG-backed lactation support that stays on the rails.</p>
+          <p class="tags"><span>RAG</span><span>Memory</span><span>Model routing</span></p>
+          <svg class="card-art" viewBox="0 0 200 80" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.3"><ellipse cx="100" cy="22" rx="46" ry="11"/><path d="M54 22v36c0 6 20 11 46 11s46-5 46-11V22"/><path d="M54 40c0 6 20 11 46 11s46-5 46-11" opacity=".5"/></g></svg>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────────────── STACK ───────────────────────── -->
+  <section class="section" id="stack">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="index">03</span>
+        <h2>Stack</h2>
+        <span class="rule" aria-hidden="true"></span>
+        <span class="section-note">Tools I reach for without thinking</span>
+      </div>
+
+      <div class="stack-grid">
+        <div class="stack-col reveal">
+          <h4>Voice &amp; real-time</h4>
+          <ul><li>LiveKit</li><li>WebRTC</li><li>Deepgram</li><li>Cartesia</li><li>ElevenLabs</li><li>Twilio · SIP · PSTN</li><li>Streaming transcription</li></ul>
         </div>
-    </footer>
+        <div class="stack-col reveal">
+          <h4>AI engineering</h4>
+          <ul><li>Multi-model routing</li><li>RAG pipelines</li><li>Agent tool design</li><li>LLM-as-a-Judge evals</li><li>Langfuse observability</li><li>Automated red-teaming</li></ul>
+        </div>
+        <div class="stack-col reveal">
+          <h4>Languages</h4>
+          <ul><li>TypeScript</li><li>JavaScript</li><li>Python</li><li>Java</li></ul>
+        </div>
+        <div class="stack-col reveal">
+          <h4>Product surface</h4>
+          <ul><li>React</li><li>React Native</li><li>Node.js</li><li>FastAPI</li><li>Tailwind CSS</li><li>Spring Boot</li></ul>
+        </div>
+        <div class="stack-col reveal">
+          <h4>Infrastructure</h4>
+          <ul><li>GCP · AWS</li><li>Docker · Kubernetes</li><li>GitHub Actions · Jenkins</li><li>ELK stack</li><li>OTA release automation</li></ul>
+        </div>
+        <div class="stack-col reveal">
+          <h4>Data</h4>
+          <ul><li>PostgreSQL</li><li>MongoDB</li><li>MySQL</li><li>Redis</li><li>Supabase</li><li>DBT</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
-    <script src="script.js"></script>
+  <!-- ───────────────────────── ABOUT ───────────────────────── -->
+  <section class="section" id="about">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="index">04</span>
+        <h2>About</h2>
+        <span class="rule" aria-hidden="true"></span>
+      </div>
 
+      <div class="about-grid">
+      <figure class="portrait reveal">
+        <img src="assets/portrait.jpg" alt="Abhiroop Mareedu" width="900" height="900" loading="lazy" decoding="async" />
+        <figcaption>Off the clock, somewhere with worse latency.</figcaption>
+      </figure>
+
+      <div class="about-body reveal">
+        <p class="about-lede">A conversation breaks in the gaps. Two hundred milliseconds of silence and a person starts wondering whether the thing is still there.</p>
+        <p>Most of my work lives in those gaps. I started at Urban Company shaving latency off booking APIs that millions of people hit during peak season, moved to SuperBryn as engineer #1 building voice agents that had to survive real phone lines, and now lead AI engineering at Coddle AI, where the user is a parent holding a baby at 3am and has exactly one hand free.</p>
+        <p>The through-line is the unglamorous half of AI: routing, memory, observability, evaluation. Anyone can demo an agent. Making one behave the same way on Tuesday as it did on Friday is the actual job — which is why I build the harness before I build the agent.</p>
+        <p>I studied Electronics &amp; Communications at <b>IIIT Delhi</b>. Outside work I train MMA and boxing, which is a surprisingly good school for shipping software: you find out fast which of your ideas survive contact.</p>
+        <div class="about-edu">
+          <span class="edu-school">IIIT Delhi</span>
+          <span class="edu-deg">B.Tech, Electronics &amp; Communications Engineering</span>
+          <span class="edu-year">2019 — 2023</span>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────────────── CONTACT ───────────────────────── -->
+  <section class="section contact" id="contact">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="index">05</span>
+        <h2>Contact</h2>
+        <span class="rule" aria-hidden="true"></span>
+      </div>
+
+      <p class="contact-lede reveal">Building something that has to listen, think and answer in real time? I'd like to hear about it.</p>
+
+      <a class="mailto reveal" href="mailto:abhiroopmareedu@gmail.com" data-cursor="link">
+        <span class="mailto-text">abhiroopmareedu@gmail.com</span>
+        <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19 19 5M9 5h10v10"/></svg>
+      </a>
+
+      <ul class="links reveal">
+        <li><a href="https://github.com/roopo21" target="_blank" rel="noopener" data-cursor="link">GitHub<span>roopo21</span></a></li>
+        <li><a href="https://linkedin.com/in/abhiroop-m" target="_blank" rel="noopener" data-cursor="link">LinkedIn<span>abhiroop-m</span></a></li>
+        <li><a href="tel:+917675923496" data-cursor="link">Phone<span>+91 76759 23496</span></a></li>
+        <li><a href="Abhiroop_Mareedu_Resume.pdf" target="_blank" rel="noopener" data-cursor="link">Résumé<span>PDF, one page</span></a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <span>© <span id="year">2026</span> Abhiroop Mareedu</span>
+    <span class="footer-mid">Hand-written HTML, CSS and JavaScript. No framework, no template.</span>
+    <button class="linkish" id="palette-open-2">Press <kbd>⌘</kbd><kbd>K</kbd></button>
+  </div>
+</footer>
+
+<!-- ───────────────────────── COMMAND PALETTE ───────────────────────── -->
+<div class="palette" id="palette" hidden>
+  <div class="palette-scrim" data-close></div>
+  <div class="palette-box" role="dialog" aria-modal="true" aria-label="Command palette">
+    <div class="palette-input">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
+      <input id="palette-search" type="text" placeholder="Jump to a section, copy an email, change the theme…" autocomplete="off" spellcheck="false" />
+      <kbd>esc</kbd>
+    </div>
+    <ul class="palette-list" id="palette-list"></ul>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="main.js"></script>
 </body>
-
 </html>
