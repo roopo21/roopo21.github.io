@@ -477,7 +477,7 @@ html[data-theme="light"] .i-moon { opacity: 1; transform: rotate(0) scale(1); }
 .toast.is-on { opacity: 1; transform: translate(-50%, 0); }
 
 /* ─────────────── reveal animation ─────────────── */
-.reveal { opacity: 0; transform: translateY(18px); }
+html.js .reveal { opacity: 0; transform: translateY(18px); }
 .reveal.is-in {
   opacity: 1; transform: none;
   transition: opacity .8s var(--ease), transform .9s var(--ease);
@@ -523,7 +523,7 @@ html[data-theme="light"] .i-moon { opacity: 1; transform: rotate(0) scale(1); }
 }
 
 /* hero word entrance — the display letters ride up out of their mask */
-.display .word { transform: translateY(108%); transition: transform 1.15s var(--ease); }
+html.js .display .word { transform: translateY(108%); transition: transform 1.15s var(--ease); }
 .display.is-in .word { transform: none; }
 .display .line:nth-child(2) .word { transition-delay: .09s; }
 @media (prefers-reduced-motion: reduce) { .display .word { transform: none; } }
